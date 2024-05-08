@@ -6,7 +6,10 @@ const fs = require("fs");
 
 router.get("/", getAdmins_get)
 
-router.post("/create",uploadImage.single("img_path"),fileValidation,dataValidation,createAdmins_post);
+router.post("/create", (req, res, next)=>{
+    console.log(req.body);
+    next()
+},uploadImage.single("image"),fileValidation,dataValidation,createAdmins_post);
 
 router.get("/get/:id", async (req, res)=> {
     try {

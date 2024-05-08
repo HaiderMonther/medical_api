@@ -1,0 +1,32 @@
+auth routes
+
+api main URL: http://localhost:7000/api/
+
+
+
+1- login 
+request URL: http://localhost:7000/api/auth/
+methode : POST
+body : {
+    "username" : "alihussein",
+    "password" : "12345678"
+}
+
+
+
+
+2- admin 
+main URL: http://localhost:7000/api/admins/
+
+
+    - get all admins accounts
+        request URL: http://localhost:7000/api/admins/
+        methode : GET
+       
+        response : {
+            
+        }
+    
+
+
+    - get 

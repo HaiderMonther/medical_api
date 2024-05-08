@@ -3,7 +3,6 @@ const bcrypt = require("bcryptjs");
 const { createJwtToken, maxAge } = require("../functions/createJWT");
 
 const loginAdmin_post = async (req, res) => {
-  console.log("hi");
   const username = req.body.username;
   const password = req.body.password;
   try {

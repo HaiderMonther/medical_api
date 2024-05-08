@@ -17,7 +17,7 @@ app.use(express.urlencoded({ limit: '5mb', extended: true }));
 
 
 const adminsRoutes = require("./routes/admins");
-app.use("/api/admins" ,requireJwtToken, adminsRoutes);
+app.use("/api/admins" , requireJwtToken, adminsRoutes);
 
 const authRoutes = require("./routes/auth");
 app.use("/api/auth",check_if_login, authRoutes);

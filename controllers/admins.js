@@ -14,6 +14,7 @@ const getAdmins_get = async (req, res)=> {
 
 const createAdmins_post = async (req, res)=> {
     const admin = req.body
+    console.log(admin);
     // hash the password
     const salt = await bcrypt.genSalt(10);
     const hashPassword = await bcrypt.hash(req.body.password, salt);
